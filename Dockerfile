@@ -1,5 +1,6 @@
 FROM ubuntu:16.04
-RUN apt-get install software-properties-common
+RUN apt-get update 
+RUN apt-get install -y python-software-properties
 RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get update 
 RUN apt-get install python3.6 -y
