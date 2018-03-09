@@ -7,3 +7,5 @@ logs/check_tiny/model.ckpt-7002*
 logs/check_tiny/model.ckpt-8002*
 logs/check_tiny/model.ckpt-9002*
 /Dockerfile~
+logs/cornell_movie_dialogs_backup/
+*.py~
