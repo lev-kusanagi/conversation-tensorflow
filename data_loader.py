@@ -172,10 +172,10 @@ def build_vocab(in_fname, out_fname, normalize_digits=True):
 
 
 def load_vocab(vocab_fname):
-    print("load vocab ...")
+    # print("load vocab ...")
     with open(os.path.join(Config.data.base_path, Config.data.processed_path, vocab_fname), 'rb') as f:
         words = f.read().decode('utf-8').splitlines()
-        print("vocab size:", len(words))
+        # print("vocab size:", len(words))
     return {words[i]: i for i in range(len(words))}
 
 
