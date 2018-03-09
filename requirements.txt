@@ -2,4 +2,4 @@ hb-config
 nltk
 tqdm
 requests
-tensorflow-gpu==1.4
+tensorflow==1.4
