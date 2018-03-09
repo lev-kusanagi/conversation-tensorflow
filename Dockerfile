@@ -1,6 +1,6 @@
-FROM ubuntu:16.04
+FROM ubuntu:latest
 RUN apt-get update 
-RUN apt-get install -y python-software-properties
+RUN apt-get install -y software-properties-common
 RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get update 
 RUN apt-get install python3.6 -y
