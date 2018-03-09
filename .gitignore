@@ -6,3 +6,4 @@ logs/cornell_movie_dialogs
 logs/check_tiny/model.ckpt-7002*
 logs/check_tiny/model.ckpt-8002*
 logs/check_tiny/model.ckpt-9002*
+/Dockerfile~
