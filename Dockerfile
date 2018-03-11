@@ -8,3 +8,4 @@ RUN apt-get install python3-pip -y
 RUN apt-get install python3.6-venv -y
 COPY / /
 RUN python3.6 -m pip install -r requirements.txt
+RUN ln -s /usr/bin/python3.6 /usr/bin/python
