@@ -93,7 +93,7 @@ def _get_user_input():
 def main():
     vocab = data_loader.load_vocab("vocab")
     Config.data.vocab_size = len(vocab)
-    sentence = args.input
+    sentence = input_string
     ids = data_loader.sentence2id(vocab, sentence)
     ids += [Config.data.START_ID]
 
@@ -107,15 +107,12 @@ def main():
 
 if __name__ == '__main__':
 
-    parser = argparse.ArgumentParser(
-                        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('--config', type=str, default='check_tiny',
-                        help='config file name')
-    parser.add_argument('--input', type=str, default='Hello',
-                        help='user input string')
-    args = parser.parse_args()
-    # print(args.input_string)
-    Config(args.config)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('input_words', metavar='N', type=str, nargs='+')
+    input = parser.parse_args()
+    input_string = ' '.join(input.input_words)
+    config = 'check_tiny'
+    Config(config)
     Config.train.batch_size = 1
 
     os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
