@@ -93,7 +93,7 @@ def _get_user_input():
 def main():
     vocab = data_loader.load_vocab("vocab")
     Config.data.vocab_size = len(vocab)
-    sentence = args.input_string
+    sentence = args.input
     ids = data_loader.sentence2id(vocab, sentence)
     ids += [Config.data.START_ID]
 
@@ -109,9 +109,9 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(
                         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('--config', type=str, default='config',
+    parser.add_argument('--config', type=str, default='check_tiny',
                         help='config file name')
-    parser.add_argument('--input_string', type=str, default='Hello',
+    parser.add_argument('--input', type=str, default='Hello',
                         help='user input string')
     args = parser.parse_args()
     # print(args.input_string)
