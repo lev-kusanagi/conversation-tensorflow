@@ -5,7 +5,7 @@ data:
   processed_path: 'processed_cornell_movie_dialogs_data'
 
   word_threshold: 2
-  max_seq_length: 20
+  max_seq_length: 10
   testset_size: 25000
   sentence_diff: 0.33
 
@@ -29,7 +29,7 @@ train:
   learning_rate: 0.003
   sampling_probability: 0.25
 
-  train_steps: 100000
+  train_steps: 200000
   model_dir: 'logs/cornell_movie_dialogs'
 
   save_checkpoints_steps: 1000
