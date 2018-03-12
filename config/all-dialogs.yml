@@ -24,7 +24,7 @@ model:
   attention_mechanism: bahdanau
 
 train:
-  learning_rate: 0.001
+  learning_rate: 0.01
   sampling_probability: 0.4
 
   train_steps: 100000
