@@ -5,7 +5,7 @@ data:
   processed_path: 'processed_cornell_movie_dialogs_data'
 
   word_threshold: 2
-  max_seq_length: 200
+  max_seq_length: 20
   testset_size: 25000
   sentence_diff: 0.33
 
@@ -21,12 +21,12 @@ model:
   embed_dim: 256
   embed_share: true
   cell_type: gru
-  dropout: 0.2
+  dropout: 0.5
   encoder_type: bi
   attention_mechanism: normed_bahdanau
 
 train:
-  learning_rate: 0.01
+  learning_rate: 0.003
   sampling_probability: 0.25
 
   train_steps: 100000
